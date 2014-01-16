@@ -1,0 +1,2 @@
+module BookToursHelper
+end

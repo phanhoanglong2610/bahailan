@@ -11,7 +11,60 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140115084002) do
+ActiveRecord::Schema.define(:version => 20140116095225) do
+
+  create_table "book_tours", :force => true do |t|
+    t.string   "tour_code"
+    t.string   "cust_name"
+    t.string   "cust_phone"
+    t.string   "cust_mobile"
+    t.string   "cust_email"
+    t.integer  "attendes"
+    t.string   "note"
+    t.string   "description"
+    t.date     "date_slot"
+    t.time     "time_slot"
+    t.string   "status"
+    t.boolean  "deleted"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "contacts", :force => true do |t|
+    t.string   "name"
+    t.string   "type"
+    t.string   "email"
+    t.string   "yahoo"
+    t.string   "skype"
+    t.string   "phone"
+    t.string   "mobile"
+    t.string   "address"
+    t.string   "city"
+    t.string   "note"
+    t.string   "description"
+    t.string   "status"
+    t.boolean  "deleted"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "products", :force => true do |t|
+    t.string   "name"
+    t.string   "code"
+    t.integer  "price"
+    t.string   "unit"
+    t.string   "note"
+    t.string   "sku"
+    t.boolean  "is_sale"
+    t.boolean  "is_feature"
+    t.boolean  "is_new"
+    t.string   "file_name"
+    t.integer  "category_id"
+    t.string   "status"
+    t.boolean  "deleted"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name"
